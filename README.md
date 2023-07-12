@@ -14,6 +14,8 @@ The ASCII Art Converter is a Python program that allows users to convert images 
 
 - User-Friendly Interface: The program utilizes a clear terminal functionality for improved readability and provides informative messages throughout the conversion process.
 
+- <a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
+
 ## Getting Started
 
 1. Install the required libraries by running the following commands:
