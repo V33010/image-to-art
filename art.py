@@ -26,7 +26,11 @@ while masterkey == 0:
     key = 0
     while key == 0:
         cool_print("Enter the name of the image file: ")
-        x = input()
+        try:
+            x = input()
+        except KeyboardInterrupt:
+            print("\nExiting 👍")
+            exit(0)
 
         try:
             img = Image.open(x)
