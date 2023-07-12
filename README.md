@@ -24,7 +24,7 @@ The ASCII Art Converter is a Python program that allows users to convert images 
 
 2. Run the program by executing the Python script:
    ```
-   python ascii_art_converter.py
+   python art.py
    ```
 
 3. Follow the prompts to enter the image file name, adjust dimensions, confirm the image display, and save the ASCII art to a text file.
