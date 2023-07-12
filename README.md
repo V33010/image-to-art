@@ -40,17 +40,11 @@ The ASCII Art Converter is a Python program that allows users to convert images 
 
 Contributions to the ASCII Art Converter project are welcome! If you have any suggestions, improvements, or bug fixes, please feel free to open an issue or submit a pull request.
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
 
 ## Acknowledgments
 
 Special thanks to the developers of the PIL and NumPy libraries for their invaluable contributions to the world of image processing and manipulation.
 
-## Contact
-
-For any questions, comments, or inquiries, please reach out to [email protected]
 
 ---
 
