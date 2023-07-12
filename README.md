@@ -18,8 +18,7 @@ The ASCII Art Converter is a Python program that allows users to convert images 
 
 1. Install the required libraries by running the following commands:
    ```
-   pip install Pillow
-   pip install numpy
+   pip install -r requirements.txt
    ```
 
 2. Run the program by executing the Python script:
