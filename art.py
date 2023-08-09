@@ -138,6 +138,42 @@ while masterkey == 0:
     time.sleep(3)
     clear_terminal()
 
+    import http.server
+    import socketserver
+    import webbrowser
+    import threading
+    
+
+    class MyRequestHandler(http.server.SimpleHTTPRequestHandler):
+        def do_GET(self):
+            if self.path == '/myfile':
+                with open(filename, 'r') as file:
+                    content = file.read()
+                    self.send_response(200)
+                    self.send_header('Content-type', 'text/plain')
+                    self.end_headers()
+                    self.wfile.write(content.encode())
+            else:
+                super().do_GET()
+
+    def start_server():
+        PORT = 8000
+        with open ('server.log', 'w') as logfile:
+            with socketserver.TCPServer(("", PORT), MyRequestHandler) as httpd:
+                # print(f"Server started on port {PORT}")
+                httpd.stdout = httpd.stderr = logfile
+                httpd.serve_forever()
+
+    # Start the server in a separate thread
+    server_thread = threading.Thread(target=start_server)
+    server_thread.start()
+
+    # Wait a bit for the server to start, then open the browser
+    webbrowser.open("http://localhost:8000/myfile")
+
+    # wait 2 seconds
+    time.sleep(2)
+
     cool_print("Thank you for using this program\n")
 
     # press 1 to run again
